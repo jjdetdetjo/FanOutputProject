@@ -1,0 +1,9 @@
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\bin\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.deps.json
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\bin\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.dll
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\bin\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.pdb
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.csprojAssemblyReference.cache
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.AssemblyInfoInputs.cache
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.AssemblyInfo.cs
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.dll
+C:\Users\Jonas\source\repos\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\OblOpg3.semClassLibrary.pdb

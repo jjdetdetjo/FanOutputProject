@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kwQ6F2DQgEtRHodVYAfG9y4LZZtbvOHbREhlks4UkZwzn49c0zAShHC+EC4bJ0Gj4gYKttTVPzWKUBsR6ehpeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jonas\\Desktop\\SemesterOpgaver\\OblOpg3.semFanOutput\\FanTCPServer\\FanTCPServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jonas\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

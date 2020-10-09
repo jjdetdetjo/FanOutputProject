@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pJPZNm1SeGI8XyHSzxvurl/qi6wWhwF1LTBma1ZT5UHb1iKtdazQTeobRQUXQtIbVbog1PKafNEpwRoGhq40hg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jonas\\Desktop\\SemesterOpgaver\\OblOpg3.semFanOutput\\RestFanService\\FanRestService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jonas\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
