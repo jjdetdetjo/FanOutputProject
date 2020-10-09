@@ -16,3 +16,12 @@ C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semClassLibrary\OblOpg3.semClassL
 C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.csproj.CoreCompileInputs.cache
 C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.dll
 C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semClassLibrary\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.pdb
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\bin\Debug\netcoreapp2.1\FanOutputLibrary.deps.json
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\bin\Debug\netcoreapp2.1\FanOutputLibrary.dll
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\bin\Debug\netcoreapp2.1\FanOutputLibrary.pdb
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.csprojAssemblyReference.cache
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.AssemblyInfoInputs.cache
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.AssemblyInfo.cs
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.dll
+C:\Users\Jonas\Desktop\SemesterOpgaver\OblOpg3.semFanOutput\OblOpg3.semClassLibrary\obj\Debug\netcoreapp2.1\FanOutputLibrary.pdb

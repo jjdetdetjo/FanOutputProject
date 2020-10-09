@@ -33,7 +33,7 @@ namespace FanOutputTests
                 FanOutput testOutput = new FanOutput("Et", 20, 50);
                 Assert.AreEqual("Et", testOutput.Navn);
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 Assert.Fail("No exception should be thrown here");
             }
@@ -79,7 +79,7 @@ namespace FanOutputTests
                 FanOutput testOutput = new FanOutput("Et", 15, 50);
                 Assert.AreEqual(15, testOutput.Temp);
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 Assert.Fail("No exception should be thrown here");
             }
@@ -95,7 +95,7 @@ namespace FanOutputTests
                 FanOutput testOutput = new FanOutput("Et", 25, 50);
                 Assert.AreEqual(25, testOutput.Temp);
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 Assert.Fail("No exception should be thrown here");
             }
@@ -141,7 +141,7 @@ namespace FanOutputTests
                 FanOutput testOutput = new FanOutput("Et", 20, 30);
                 Assert.AreEqual(30, testOutput.Fugt);
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 Assert.Fail("No exception should be thrown here");
             }
@@ -157,7 +157,7 @@ namespace FanOutputTests
                 FanOutput testOutput = new FanOutput("Et", 20, 80);
                 Assert.AreEqual(80, testOutput.Fugt);
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 Assert.Fail("No exception should be thrown here");
             }
@@ -173,7 +173,7 @@ namespace FanOutputTests
                 testOutput.Id = 1;
                 Assert.AreEqual(1, testOutput.Id);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Assert.Fail("No exception should be thrown here");
             }
@@ -187,7 +187,7 @@ namespace FanOutputTests
                 FanOutput testOutput = new FanOutput();
                 Assert.AreEqual(null, testOutput.Navn);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 Assert.Fail("No exception should be thrown here");
             }

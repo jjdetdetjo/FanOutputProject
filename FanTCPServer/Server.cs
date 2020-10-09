@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Sockets;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Threading;
+using System.Threading.Tasks;
 using FanOutputLibrary;
 using FanRestService.Controllers;
 using Newtonsoft.Json;
@@ -18,71 +21,79 @@ namespace FanTCPServer
         public void Start()
         {
             TcpListener serverSocket = new TcpListener(4646);
+            Thread.CurrentThread.Name = "Main";
             serverSocket.Start();
-            using (TcpClient connectionSocket = serverSocket.AcceptTcpClient())
+            Console.WriteLine("Server is up and running");
+            TaskFactory taskFactory = new TaskFactory();
+            while (true)
             {
-                Console.WriteLine("Server is up and running");
-                Stream ns = connectionSocket.GetStream();
-                StreamReader sr = new StreamReader(ns);
-                StreamWriter sw = new StreamWriter(ns);
-                sw.AutoFlush = true;
-                FanController controller = new FanController();
+                TcpClient connectionSocket = serverSocket.AcceptTcpClient();
+                taskFactory.StartNew(() => DoClient(connectionSocket));
+            }
 
-                while (true)
+        }
+
+        private void DoClient(TcpClient connectionSocket)
+        {
+            Stream ns = connectionSocket.GetStream();
+            StreamReader sr = new StreamReader(ns);
+            StreamWriter sw = new StreamWriter(ns);
+            sw.AutoFlush = true;
+            FanController controller = new FanController();
+
+            while (true)
+            {
+                string message1 = sr.ReadLine();
+                string message2 = sr.ReadLine();
+                Console.WriteLine("Recieved message: " + message1 + message2);
+
+                if (message1 == "HentAlle")
                 {
-                    string message1 = sr.ReadLine();
-                    string message2 = sr.ReadLine();
-                    Console.WriteLine("Recieved message: " + message1 + message2);
-
-                    if (message1 == "HentAlle")
+                    foreach (var fanoutput in controller.Get())
                     {
-                        foreach (var fanoutput in controller.Get())
-                        {
-                            string outputString = JsonConvert.SerializeObject(fanoutput);
-                            Console.WriteLine(outputString);
-                        }
+                        string outputString = JsonConvert.SerializeObject(fanoutput);
+                        Console.WriteLine(outputString);
                     }
-                    else if (message1 == "Hent")
+                }
+                else if (message1 == "Hent")
+                {
+                    if (int.TryParse(message2, out var number))
                     {
-                        if (int.TryParse(message2, out var number))
-                        {
-                            string outputString = JsonConvert.SerializeObject(controller.Get(number));
-                            Console.WriteLine(outputString);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Du angav ikke et tal, prøv igen");
-                        }
-                    }
-                    else if (message1 == "Gem")
-                    {
-                        try
-                        {
-                            FanOutput output = JsonConvert.DeserializeObject<FanOutput>(message2);
-                            try
-                            {
-                                controller.Post(output);
-                            }
-                            catch (ArgumentException e)
-                            {
-                                Console.WriteLine(e.Message);
-                            }
-                        }
-                        catch (Exception e)
-                        {
-                            Console.WriteLine("Du angav ikke en gyldig json string, prøv igen");
-                        }
-                    }
-                    else if (message1 == "break")
-                    {
-                        break;
+                        string outputString = JsonConvert.SerializeObject(controller.Get(number));
+                        Console.WriteLine(outputString);
                     }
                     else
                     {
-                        Console.WriteLine("Skriv enten: Hentalle + en tom besked, Hent + et tal efterfølgende, Gem + en json string efterfølgende");
+                        Console.WriteLine("Du angav ikke et tal, prøv igen");
                     }
                 }
-
+                else if (message1 == "Gem")
+                {
+                    try
+                    {
+                        FanOutput output = JsonConvert.DeserializeObject<FanOutput>(message2);
+                        try
+                        {
+                            controller.Post(output);
+                        }
+                        catch (ArgumentException e)
+                        {
+                            Console.WriteLine(e.Message);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Du angav ikke en gyldig json string, prøv igen");
+                    }
+                }
+                else if (message1 == "break")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Skriv enten: Hentalle + en tom besked, Hent + et tal efterfølgende, Gem + en json string efterfølgende");
+                }
             }
         }
     }
